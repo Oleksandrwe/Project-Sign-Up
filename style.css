@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norse-Bold.woff2') format('woff2'),
+        url('fonts/Norse-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+
+  legend {
+
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+
+  }
+body {
+    
+    line-height: 1.3;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F7F8;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .speaker-form-header {
+
+    /* text-align: center; */
+   
+    border-radius: 3px;
+    
+    width: 80%;
+    margin: 40px 0;
+    
+  }
+
+
+  header {
+
+font-weight: bolder;
+  }
+
+
+.container {
+
+   display: flex;
+   /* justify-content: center;
+   align-items: center; */
+}
+
+.fullform {
+    display: inline;
+/* padding-right: 500px; */
+margin-right: 100px;
+
+}
+
+
+header {
+
+    padding-left: 100px;
+   
+  
+}
+
+footer {
+
+    padding-left: 100px;
+
+}
+form {
+
+    background-color: white;
+   padding-left: 100px;
+   padding-right: 200px; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+.photo {
+
+display: flex;
+justify-content: center;
+align-items: flex-start;
+width: 30%;
+min-width: 400px;
+
+}
+
+
+.odin {
+
+    display: flex;
+    position: absolute;
+    color: azure;
+    font-family: norse;
+    font-size: 30px;
+   
+    margin-top: 90px;
+    background-color: hsla(51, 87%, 3%, 0.75);
+    
+    padding-left: 150px;
+    padding-right: 134px;
+
+
+}
+
+.odin1 {
+
+    width: 70px;
+}
+
+button {
+
+    background-color: #596D48;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 30px;
+}
+
+
+  .p-control {
+
+
+    line-height: 1.1;
+    display: flex;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+
+  }
+
+
+  .form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .form-row input[type='text'],
+    .form-row input[type='email'],    /* Add */
+    .form-row input[type='number'],                 /* These */
+    .form-row input[type='password']
+   {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+  }
+  
+
+
+  @media only screen and (min-width: 700px) {
+    .speaker-form-header,
+    .speaker-form {
+      width: 800px;
+    }
+    .form-row {
+      flex-direction: row;
+      align-items: flex-start; /* To avoid stretching */
+      margin-bottom: 20px;
+    }
+    .form-row input[type='text'] {
+      width: 250px;
+      height: initial;
+    }
+    .form-row label {
+      text-align: left;
+      width: 120px;
+      margin-top: 7px;
+      padding-right: 20px;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+  .speaker-form-header,
+  .speaker-form {
+    width: 600px;
+  }
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start; /* To avoid stretching */
+    margin-bottom: 20px;
+  }
+  .form-row input[type='text'] {
+    width: 250px;
+    height: initial;
+  }
+  .form-row label {
+    text-align: left;
+    width: 120px;
+    margin-top: 7px;
+    padding-right: 20px;
+  }
+}
+
+
+/* Change this rule */
+.form-row input[type='text'] {
+    background-color: #FFFFFF;
+    /* ... */
+  }
+  
+  /* To have another selector */
+  .form-row input[type='text'],
+  .form-row input[type='email'] {
+    background-color: #FFFFFF;
+    /* ... */
+  }
+
+  @media only screen and (min-width: 700px) {
+    /* ... */
+    .form-row input[type='text'],
+    .form-row input[type='email'],    /* Add */
+    .form-row input[type='number'],                 /* These */
+    .form-row input[type='password']
+    {              /* Selectors */
+      width: 250px;
+      height: initial;
+    }
+    /* ... */
+  }
+
+
+  .form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid,
+.form-row input[type='number']:invalid,
+.form-row input[type='password']:invalid{
+  border: 1px solid #fc0004;
+ 
+  box-shadow: none; /* Remove default red glow in Firefox */
+}
+
+
+.form-row input[type='text']:valid,
+.form-row input[type='email']:valid,
+.form-row input[type='number']:valid,
+.form-row input[type='password']:valid{
+    border-color: green;
+ 
+  box-shadow: none; /* Remove default red glow in Firefox */
+}
+
+
+
+.form-row button {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #FFFFFF;
+    background-color: #596D48;
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  .form-row button:hover {
+    background-color: #76AEED;
+  }
+  
+  .form-row button:active {
+    background-color: #407FC7;
+  }
+
+
